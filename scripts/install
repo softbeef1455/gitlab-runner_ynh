@@ -65,13 +65,12 @@ for i in $(seq $nb_to_register); do
     docker_img=$(echo $docker_image | cut -d$split_char -f$i)
 
     # Register the runner
-    ynh_hide_warnings $app register \
+    ynh_hide_warnings $app --debug register \
         --non-interactive \
         --url "$url" \
         --token "$tok" \
         --executor "$executor" \
-        --docker-image "$docker_img" \
-        --debug
+        --docker-image "$docker_img"
 done
 
 #=================================================
