@@ -70,7 +70,8 @@ for i in $(seq $nb_to_register); do
         --url "$url" \
         --token "$tok" \
         --executor "$executor" \
-        --docker-image "$docker_img"
+        --docker-image "$docker_img" \
+        --debug
 done
 
 #=================================================
